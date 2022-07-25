@@ -119,4 +119,4 @@ int main(){
 // }
 
 // Output is: 
-// ineuron7
+ineuron7
