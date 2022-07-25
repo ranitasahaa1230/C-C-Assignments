@@ -1,4 +1,4 @@
-// Write a program to print Hello Students on the screen.
+// 1. Write a program to print Hello Students on the screen.
 
 #include<stdio.h>
 int main(){
@@ -6,7 +6,7 @@ int main(){
     return 0;
 }
 
-// Write a program to print Hello in the first line and Students in the second line.
+// 2. Write a program to print Hello in the first line and Students in the second line.
 
 #include<stdio.h>
 int main(){
@@ -14,7 +14,7 @@ int main(){
     return 0;
 }
 
-// Write a program to print “MySirG” on the screen. (Remember to print in double quotes)
+// 3. Write a program to print “MySirG” on the screen. (Remember to print in double quotes)
 
 #include<stdio.h>
 int main(){
@@ -22,7 +22,7 @@ int main(){
     return 0;
 }
 
-// WAP to find the area of the circle. Take radius of circle from user as input and print the
+// 4. WAP to find the area of the circle. Take radius of circle from user as input and print the
 // result in below given format.
 
 #include<stdio.h>
@@ -35,7 +35,7 @@ int main(){
     return 0;
 }
 
-// WAP to calculate the length of String using printf function.
+// 5. WAP to calculate the length of String using printf function.
 
 #include<stdio.h>
 int main(){
@@ -46,7 +46,7 @@ int main(){
     return 0;
 }
 
-// WAP to print the name of the user in double quotes.
+// 6. WAP to print the name of the user in double quotes.
 
 #include<stdio.h>
 int main(){
@@ -54,7 +54,7 @@ int main(){
     return 0;
 }
 
-// WAP to print “%d” on the screen.
+// 7. WAP to print “%d” on the screen.
 
 #include<stdio.h>
 int main(){
@@ -62,7 +62,7 @@ int main(){
     return 0;
 }
 
-// WAP to print “\n” on the screen.
+// 8. WAP to print “\n” on the screen.
 
 #include<stdio.h>
 int main(){
@@ -70,7 +70,7 @@ int main(){
     return 0;
 }
 
-// WAP to print “\\” on the screen.
+// 9. WAP to print “\\” on the screen.
 
 #include<stdio.h>
 int main(){
@@ -78,7 +78,7 @@ int main(){
     return 0;
 }
 
-// WAP to take date as an input in below given format and convert the date format and
+// 10. WAP to take date as an input in below given format and convert the date format and
 // display the result as given below.
 
 #include<stdio.h>
@@ -90,7 +90,8 @@ int main(){
     return 0;
 }
 
-// Find output of below code:
+// 11. Find output of below code:
+
 // int main()
 // {
 // int x = printf("ineuron");
