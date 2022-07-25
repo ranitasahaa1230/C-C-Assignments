@@ -80,6 +80,9 @@ int main(){
 
 // 10. WAP to take date as an input in below given format and convert the date format and
 // display the result as given below.
+// User Input date format – “DD/MM/YYYY” (27/11/2022)
+// Output format –
+// “Day – DD , Month – MM , Year – YYYY” (Day – 27 ,Month – 07 , Year – 2022)
 
 #include<stdio.h>
 int main(){
@@ -90,7 +93,23 @@ int main(){
     return 0;
 }
 
-// 11. Find output of below code:
+// 11. WAP to take time as an input in below given format and convert the time format and
+// display the result as given below.
+// User Input date format – “HH:MM”
+// Output format – “HH hour and MM Minute”
+// Example –
+// “11:25” converted to “11 Hour and 25 Minute”
+
+#include<stdio.h>
+int main(){
+    int h,m;
+    printf("Enter time in HH:MM format: ");
+    scanf("%d:%d",&h,&m);
+    printf("%d:%d converted to %d Hours and %d Minute",h,m,h,m);
+    return 0;
+}
+
+// 12. Find output of below code:
 
 // int main()
 // {
@@ -100,4 +119,4 @@ int main(){
 // }
 
 // Output is: 
-ineuron7
+// ineuron7

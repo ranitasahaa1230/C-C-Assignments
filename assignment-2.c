@@ -2,7 +2,10 @@
 
 #include<stdio.h>
 int main(){
-    printf("\"Hello, Ranita Saha\"");
+    int h,m;
+    printf("Enter time in HH:MM format: ");
+    scanf("%d:%d",&h,&m);//=> '/' will ignore
+    printf("%d:%d converted to %d Hours and %d Minute",h,m,h,m);
     return 0;
 }
 
