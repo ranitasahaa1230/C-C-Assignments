@@ -1,19 +1,24 @@
 // 1. Write a program to print unit digit of a given number
 
-#include<stdio.h>
-int main(){
-    int h,m;
-    printf("Enter time in HH:MM format: ");
-    scanf("%d:%d",&h,&m);//=> '/' will ignore
-    printf("%d:%d converted to %d Hours and %d Minute",h,m,h,m);
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     int k=h%10;
+//     printf("%d is the unit digit",k);
+//     return 0;
+// }
 
 // 2. Write a program to print a given number without its last digit.
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     int k=h/10;
+//     printf("%d is the digit without its last digit",k);
 //     return 0;
 // }
 
@@ -21,7 +26,13 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int a,b,c;
+//     printf("Enter the number: ");
+//     scanf("%d %d",&a,&b);//2 4
+//     c=a;
+//     a=b;
+//     b=c;
+//     printf("a=%d and b=%d swap values",a,b);
 //     return 0;
 // }
 
@@ -29,7 +40,13 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int a,b;
+//     printf("Enter the number: ");
+//     scanf("%d %d",&a,&b);//2 4
+//     a=a+b;
+//     b=a-b;
+//     a=a-b;
+//     printf("a=%d and b=%d swap values",a,b);
 //     return 0;
 // }
 
@@ -37,17 +54,26 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int a,sum=0,rem,k;
+//     printf("Enter the three-digit number: ");
+//     scanf("%d",&a);//321=>
+//     k=a;
+//     while(k>0){ //while(k!=0)
+//         rem=k%10;
+//         sum+=rem;
+//         k=k/10;
+//     }
+//     printf("%d is the sum of the digit %d",sum,a);
 //     return 0;
 // }
 
 // 6. Write a program which takes a character as an input and displays its ASCII code.
 
-// #include<stdio.h>
-// int main(){
-//     printf("\"Hello, Ranita Saha\"");
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    printf("\"Hello, Ranita Saha\"");
+    return 0;
+}
 
 // 7. Write a program to find the position of first 1 in LSB.
 
