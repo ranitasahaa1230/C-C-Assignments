@@ -1,16 +1,30 @@
 // 1. Write a program to check whether a given number is positive or non-positive.
 
-#include<stdio.h>
-int main(){
-    printf("\\\\");
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     if(h>=0){
+//         printf("%d is a Positive number",h);
+//     }else{
+//         printf("%d is a non-positive number",h);
+//     };
+//     return 0;
+// }
 
 // 2. Write a program to check whether a given number is divisible by 5 or not
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     if(h%5==0){
+//         printf("%d is divisible by 5",h);
+//     }else{
+//         printf("%d is not divisible by 5",h);
+//     };
 //     return 0;
 // }
 
@@ -18,32 +32,41 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     if(h%2==0){
+//         printf("%d is an even number",h);
+//     }else{
+//         printf("%d is an odd number",h);
+//     };
 //     return 0;
 // }
+
 
 // 4. Write a program to check whether a given number is an even number or an odd
 // number without using % operator.
 
-// #include<stdio.h>
-// int main(){
-//     printf("\\\\");
-//     return 0;
-// }
+
 
 // 5. Write a program to check whether a given number is a three-digit number or not.
 
-// #include<stdio.h>
-// int main(){
-//     printf("\\\\");
-//     return 0;
-// }
+
 
 // 6. Write a program to print greater between two numbers. Print one number of both are the same.
 
 // #include<stdio.h>
-// int main(){
-//     printf("\\\\");
+// int main(){//2 5
+//     int h,k;
+//     printf("Enter the number: ");
+//     scanf("%d %d",&h,&k);
+//     if(h>k){
+//         printf("%d is greater",h);
+//     }else if(h==k){
+//         printf("%d both same",k);
+//     }else{
+//         printf("%d is greater",k);
+//     };
 //     return 0;
 // }
 
@@ -69,7 +92,18 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int h,k,l;
+//     printf("Enter the number: ");
+//     scanf("%d %d %d",&h,&k,&l);
+//     if(h>k && h>l){
+//         printf("%d is greater",h);
+//     }else if(k>l && k>h){
+//         printf("%d is greater",k);
+//     }else if(h==k && k==l){
+//         printf("%d  nums",k);
+//     }else{
+//         printf("%d is greater",l);
+//     };
 //     return 0;
 // }
 
@@ -136,11 +170,22 @@ int main(){
 // 17. Write a program which takes the length of the sides of a triangle as an input. Display
 // whether the triangle is valid or not.
 
-// #include<stdio.h>
-// int main(){
-//     printf("\\\\");
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    int h,k,l;
+    printf("Enter the number: ");
+    scanf("%d %d %d",&h,&k,&l);
+    if(h>k && h>l){
+        printf("%d is greater",h);
+    }else if(k>l && k>h){
+        printf("%d is greater",k);
+    }else if(h==k && k==l){
+        printf("%d  nums",k);
+    }else{
+        printf("%d is greater",l);
+    };
+    return 0;
+}
 
 // 18. Write a program which takes the month number as an input and display number of
 // days in that month
