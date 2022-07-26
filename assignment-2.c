@@ -69,11 +69,11 @@
 
 // 6. Write a program which takes a character as an input and displays its ASCII code.
 
-#include<stdio.h>
-int main(){
-    printf("\"Hello, Ranita Saha\"");
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     printf("\"Hello, Ranita Saha\"");
+//     return 0;
+// }
 
 // 7. Write a program to find the position of first 1 in LSB.
 
@@ -112,11 +112,15 @@ int main(){
 // digit in the number and print the resulting number. (Example - number=234 and
 // digit=9 then the resulting number is 2349)
 
-// #include<stdio.h>
-// int main(){
-//     printf("\"Hello, Ranita Saha\"");
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    int number,digit,result;
+    printf("Enter the number and digit which you want to append: ");
+    scanf("%d %d",&number,&digit);
+    result=number+Number(digit);
+    printf("%d is the number",result);
+    return 0;
+}
 
 // 12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and
 // convert it into USD.

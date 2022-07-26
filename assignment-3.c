@@ -170,28 +170,35 @@
 // 17. Write a program which takes the length of the sides of a triangle as an input. Display
 // whether the triangle is valid or not.
 
-#include<stdio.h>
-int main(){
-    int h,k,l;
-    printf("Enter the number: ");
-    scanf("%d %d %d",&h,&k,&l);
-    if(h>k && h>l){
-        printf("%d is greater",h);
-    }else if(k>l && k>h){
-        printf("%d is greater",k);
-    }else if(h==k && k==l){
-        printf("%d  nums",k);
-    }else{
-        printf("%d is greater",l);
-    };
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int h,k,l;
+//     printf("Enter the number: ");
+//     scanf("%d %d %d",&h,&k,&l);
+//     if(h+k>l && h+l>k && l+k>h){
+//         printf("is a valid triangle");
+//     }else{
+//         printf("is not a valid triangle");
+//     };
+//     return 0;
+// }
 
 // 18. Write a program which takes the month number as an input and display number of
 // days in that month
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int h;
+//     printf("Enter the month number: ");
+//     scanf("%d",&h);
+//     if(h==1 || h==3 || h==5 || h==7 || h==8 || h==10 || h==12){
+//         printf("31 days");
+//     }else if(h==2){
+//         printf("28/29 days");
+//     }else if(h==4 || h==6 || h==9 || h==11){
+//         printf("30 days");
+//     }else{
+//         printf("Invalid input");
+//     };
 //     return 0;
 // }
