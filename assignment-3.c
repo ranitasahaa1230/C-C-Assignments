@@ -46,18 +46,19 @@
 // 4. Write a program to check whether a given number is an even number or an odd
 // number without using % operator.
 
-#include<stdio.h>
-int main(){
-    int h;
-    printf("Enter the number: ");
-    scanf("%d",&h);
-    if(h>=100 && h<1000){
-        printf("%d is an even number",h);
-    }else{
-        printf("%d is an odd number",h);
-    };
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int h;
+//     printf("Enter the number: ");
+//     scanf("%d",&h);
+//     // if((h&1)==0){
+//     if(( h >> 1) <<1==h){
+//         printf("%d is an even number",h);
+//     }else{
+//         printf("%d is an odd number",h);
+//     };
+//     return 0;
+// }
 
 // 5. Write a program to check whether a given number is a three-digit number or not.
 
@@ -94,14 +95,22 @@ int main(){
 // 7. Write a program to check whether roots of a given quadratic equation are real &
 // distinct, real & equal or imaginary roots
 
-// #include<stdio.h>
-// int main(){
-//     int a,b,c;
-//     printf("Enter the year: ");
-//     scanf("%d",&year);
-//     printf("\\\\");
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    double a, b, c, discriminant;
+    printf("Enter coefficients a, b and c: ");
+    scanf("%lf%lf%lf",&a,&b,&c);
+    
+    discriminant=b*b-(4*a*c);
+    if(discriminant>0){
+        printf("Roots are real and distinct");
+    }else if(discriminant==0){
+        printf("Roots are real and equal");
+    }else{
+        printf("Roots are imaginary");
+    }
+    return 0;
+}
 
 // 8. Write a program to check whether a given year is a leap year or not.
 
