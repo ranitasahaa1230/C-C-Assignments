@@ -104,21 +104,34 @@
 
 // 9. Write a program to calculate LCM of two numbers
 
-// #include<stdio.h>
-// int main(){
-//     printf("\\\\");
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    int a,b,lcm;
+    printf("Enter two numbers: ");
+    scanf("%d",&a,&b);
+    k=num;
+    while(num!=0){
+        rem=num%10;
+        reverse=reverse*10+rem;
+        num=num/10;
+    }
+    printf("The LCM of two numbers %d and %d is %d",a,b,lcm);
+    return 0;
+}
 
 // 10. Write a program to reverse a given number
 
-#include<stdio.h>
-int main(){
-    int i,num,reverse;
-    printf("Enter the number: ");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
-    reverse+=i*i*i;
-    printf("The reverse of a given number %d is %d",num,reverse);
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int num,reverse=0,k,rem;
+//     printf("Enter the number: ");
+//     scanf("%d",&num);
+//     k=num;
+//     while(num!=0){
+//         rem=num%10;
+//         reverse=reverse*10+rem;
+//         num=num/10;
+//     }
+//     printf("The reverse of a given number %d is %d",k,reverse);
+//     return 0;
+// }
