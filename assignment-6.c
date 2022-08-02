@@ -94,7 +94,7 @@
 //     int num,i,flag=0;
 //     printf("Enter the number: ");
 //     scanf("%d",&num);
-//     for(i=2;i<=num/2;i++){
+//     for(i=2;i<=sqrt(num);i++){
 //         if(num%i==0){
 //             flag=1;
 //             break;
@@ -109,7 +109,6 @@
 //         printf("%d is not a prime number",num);
 //     return 0;
 // }
-
 
 // 9. Write a program to calculate LCM of two numbers
 
