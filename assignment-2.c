@@ -71,7 +71,10 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//      char ch;
+//     printf("Enter a character: ");
+//     scanf("%c",&ch);
+//     printf("The ASCII code of %c is %d",ch,ch);
 //     return 0;
 // }
 
@@ -127,7 +130,12 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//      float inr;
+//     // inr == (76.23)/usd;
+//     printf("Enter the amount in INR: ");
+//     scanf("%f",&inr);
+//     float usd=(76.23)*inr;
+//     printf("The USD Price is %f",usd);
 //     return 0;
 // }
 
