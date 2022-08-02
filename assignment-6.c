@@ -91,12 +91,21 @@
 
 // #include<stdio.h>
 // int main(){
-//     int num;
+//     int num,i,flag=0;
 //     printf("Enter the number: ");
 //     scanf("%d",&num);
-//     if(num%1==0 && num%num==0)
-//         printf("%d is a prime number",num);
-//     else
+//     for(i=2;i<=num/2;i++){
+//         if(num%i==0){
+//             flag=1;
+//             break;
+//         }
+//     }
+//     if(num<=1)
+//         flag=1;
+
+//         if(flag==0)
+//             printf("%d is a prime number",num);
+//         else
 //         printf("%d is not a prime number",num);
 //     return 0;
 // }
@@ -104,20 +113,41 @@
 
 // 9. Write a program to calculate LCM of two numbers
 
-#include<stdio.h>
-int main(){
-    int a,b,lcm;
-    printf("Enter two numbers: ");
-    scanf("%d",&a,&b);
-    k=num;
-    while(num!=0){
-        rem=num%10;
-        reverse=reverse*10+rem;
-        num=num/10;
-    }
-    printf("The LCM of two numbers %d and %d is %d",a,b,lcm);
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int num1,num2,max_div,flag=1;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d",&num1,&num2);
+//     max_div=(num1>num2) ? num1 : num2;
+//     while(flag){
+//         if(max_div % num1 == 0 && max_div % num2==0){
+//                 printf("The LCM of two numbers %d and %d is %d",num1,num2,max_div);
+//                 break;
+//         }
+//         ++max_div;
+//     }
+//     return 0;
+// }
+
+// OR
+
+// #include<stdio.h>
+// int main(){
+//     int num1,num2,n1,n2,gcd,lcm,rem;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d",&num1,&num2);
+//     n1=num1;
+//     n2=num2;
+//     while(num1%num2!=0){
+//         rem=num1%num2;
+//         num1=num2;
+//         num2=rem;
+//     }
+//     gcd=num2;
+//     lcm=(n1*n2)/gcd;
+//     printf("The LCM of two numbers %d and %d is %d",n1,n2,lcm);
+//     return 0;
+// }
 
 // 10. Write a program to reverse a given number
 
