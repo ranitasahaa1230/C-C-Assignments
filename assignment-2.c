@@ -142,7 +142,7 @@
 //     printf("Enter the amount in INR: ");
 //     scanf("%f",&inr);
 //     float usd=(76.23)*inr;
-//     printf("The USD Price is %f",usd);
+//     printf("The USD Price is %.2f",usd);
 //     return 0;
 // }
 
@@ -165,3 +165,4 @@
 //     }
 //     return 0;
 // }
+

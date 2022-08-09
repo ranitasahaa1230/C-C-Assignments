@@ -30,21 +30,31 @@ int main(){
     int r;
     printf("Enter the radius of the circle:");
     scanf("%d",&r);
-    int A=3.14*r*r;
-    printf("Area of circle is %d having the radius %d",A,r);
+    float A=3.14*r*r;
+    printf("Area of circle is %.2f having the radius %d",A,r);
     return 0;
 }
 
 // 5. WAP to calculate the length of String using printf function.
 
+// #include<stdio.h>
+// int main(){
+//     char Str[1000];
+//     printf("Enter the string: ");
+//     scanf("%s",&Str);
+//     printf("Length of Str is %d",strlen(Str));
+//     return 0;
+// }
+
+//OR 
+
 #include<stdio.h>
 int main(){
-    char Str[1000];
-    printf("Enter the string: ");
-    scanf("%s",Str);
-    printf("Length of Str is %d",strlen(Str));
+    int x=printf("Ranita Saha ");
+    printf("Length of \"Ranita Saha \" is %d",x);
     return 0;
 }
+
 
 // 6. WAP to print the name of the user in double quotes.
 
