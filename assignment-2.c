@@ -135,16 +135,17 @@
 // 12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and
 // convert it into USD.
 
-// #include<stdio.h>
-// int main(){
-//      float inr;
-//     // inr == (76.23)/usd;
-//     printf("Enter the amount in INR: ");
-//     scanf("%f",&inr);
-//     float usd=(76.23)*inr;
-//     printf("The USD Price is %.2f",usd);
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+     float inr;
+    //  1usd=76.23inr;
+    //  1inr=(1/76.23)usd;
+    printf("Enter the amount in INR: ");
+    scanf("%f",&inr);
+    float usd=(76.23)*inr;
+    printf("The USD Price is %.2f",usd);
+    return 0;
+}
 
 // 13. Write a program to take a three-digit number from the user and rotate its digits by
 // one position towards the right.
