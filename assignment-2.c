@@ -98,7 +98,14 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int a;
+//     float b;
+//     char c;
+//     double d;
+//     printf("\nSize of int:  %zu bytes", sizeof(a));
+//     printf("\nSize of float: %zu bytes", sizeof(b));
+//     printf("\nSize of char: %zu byte", sizeof(c));
+//     printf("\nSize of double: %zu bytes", sizeof(d));
 //     return 0;
 // }
 
@@ -115,15 +122,15 @@
 // digit in the number and print the resulting number. (Example - number=234 and
 // digit=9 then the resulting number is 2349)
 
-#include<stdio.h>
-int main(){
-    int number,digit,result;
-    printf("Enter the number and digit which you want to append: ");
-    scanf("%d %d",&number,&digit);
-    result=number+Number(digit);
-    printf("%d is the number",result);
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int number,digit,result;
+//     printf("Enter the number and digit which you want to append: ");
+//     scanf("%d %d",&number,&digit);
+//     result=number+Number(digit);
+//     printf("%d is the number",result);
+//     return 0;
+// }
 
 // 12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and
 // convert it into USD.
@@ -144,6 +151,17 @@ int main(){
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int num,temp,rem,div;
+//     printf("Enter a three digit number: ");
+//     scanf("%d",&num);
+//     temp=num;
+//     if(num>99 && num<1000){
+//         rem=num%10;
+//         div=num/10;
+//         int op=100*rem+div;
+//         printf("%d is the number which is rotated by one position towards the right.",op);
+//     }else{
+//             printf("Not a three-digit number");
+//     }
 //     return 0;
 // }
