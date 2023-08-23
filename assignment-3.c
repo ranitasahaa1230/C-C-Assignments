@@ -137,17 +137,20 @@ int main(){
     int h,k,l;
     printf("Enter the number: ");
     scanf("%d %d %d",&h,&k,&l);
-    if(h>k && h>l){
+    if(h>k){
+        if(h>l)
         printf("%d is greater",h);
-    }else if(k>l && k>h){
-        printf("%d is greater",k);
-    }else if(h==k && k==l){
-        printf("%d  nums",k);
+        else
+        printf("%d is greater",l);
     }else{
+        if(k>l)
+        printf("%d is greater",k);
+        else
         printf("%d is greater",l);
     };
     return 0;
 }
+
 
 // 10. Write a program which takes the cost price and selling price of a product from the
 // user. Now calculate and print profit or loss percentage.
@@ -274,11 +277,11 @@ int main(){
     char a;
     printf("Enter the character: ");
     scanf("%c",&a);
-    if(a>=65 && a<=90)
+    if(a>='A' && a<='Z')
         printf("Character is in Uppercase");
-    else if(a>=97 && a<=122)
+    else if(a>='a' && a<='z')
         printf("Character is in Lowercase");
-    else if(a>=48 && a<=57)
+    else if(a>='0' && a<='9')
         printf("Character is a digit");
     else
         printf("Character is a special character");

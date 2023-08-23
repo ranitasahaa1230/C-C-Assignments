@@ -99,7 +99,7 @@ int main(){
 int main(){
     int num,i,flag=0;
     printf("Enter the number: ");
-    scanf("%d",&num);
+    scanf("%d",&num);//5
     for(i=2;i<=sqrt(num);i++){
         if(num%i==0){
             flag=1;
@@ -170,3 +170,18 @@ int main(){
     printf("The reverse of a given number %d is %d",k,reverse);
     return 0;
 }
+// OR
+
+// #include<stdio.h>
+// int main(){
+//     int n, temp,k;
+//     printf("Enter a no:");
+//     scanf("%d",&n);
+//     temp=n;
+//     while(temp!=0){//532
+//         k=temp%10;//2
+//         printf("%d",k);
+//         temp=temp/10;//53
+//     }
+// }
+// //

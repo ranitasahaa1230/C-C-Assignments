@@ -114,7 +114,12 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\"Hello, Ranita Saha\"");
+//     int a,k,rem,s=0;
+//     printf('Enter a no:');
+//     scanf("%d",&a);//5487
+//     rem=a%10;//7
+//     k=a-rem;
+//     printf("%d",k);
 //     return 0;
 // }
 
@@ -127,7 +132,7 @@
 //     int number,digit,result;
 //     printf("Enter the number and digit which you want to append: ");
 //     scanf("%d %d",&number,&digit);
-//     result=number+Number(digit);
+//     result=number*10+digit;
 //     printf("%d is the number",result);
 //     return 0;
 // }
