@@ -1,4 +1,5 @@
 // 1. Write a program which takes the month number as an input and display number of days in that month.
+
 // #include<stdio.h>
 // int main(){
 //     int x,days;
@@ -7,16 +8,13 @@
 //     switch (x)
 //     {
 //     case 1:
-//         if(x==3 || x==5 || x==7 || x==8 || x==10 || x==12)
 //         printf("31 days");
 //         break;
 //      case 2:
-//         if (x==4 || x==6 || x==9 || x==11)
-//         printf("30 days");
+//         printf("28/29 days");
 //         break;
 //      case 3:
-//         if (x==2)
-//         printf("28/29 days");
+//         printf("31 days");
 //         break;
         
 //     default:
@@ -114,6 +112,39 @@
 // or not
 // d. Exit
 
+    // #include<stdio.h>
+    // #include<stdlib.h>
+    // int main(){
+    //     int x,a,b,c;
+    //     while(1){
+    //     printf("Enter your choice:");
+    //     printf("\n1. Isos triangle");
+    //     printf("\n2. Right -angled triangle");
+    //     printf("\n3. Equilateral triangle");
+    //     printf("\n4. Exit");
+    //     scanf("%d",&x);
+    //     printf("enter 3 nos:");
+    //     scanf("%d %d %d ",a,b,c);
+    //     switch (x)
+    //     {
+    //     case 1:
+    //     if(a==b || b==c || c==a) printf("isos");
+    //     else printf("not isos");
+    //     break;
+    //     case 2:
+    //     if(a*a==b*b+c*c || b*b==a*a+c*c || c*c==a*a+b*b) printf("right");
+    //     else printf("not right");
+    //     break;
+    //     case 3:
+    //     if(a*a==b && b==c)printf("equi");
+    //     else printf("not equi");
+    //     break;
+    //     case 4: exit(0);
+    //     default:
+    //         printf("Invalid choice");
+    //     }
+    //     }
+    // }
 
 // 5. Convert the following if-else-if construct into switch case:
 // if(var == 1)
@@ -152,14 +183,18 @@
 //     int x;
 //     printf("Enter your no:");
 //     scanf("%d",&x);
-//     switch (x)
+//     switch (x%100==0)
 //     {
 //     case 1:
-//         if(x%400==0|| x%4==0) printf("leap yr");
-//         break;
-//      case 2:
-//         if(x%100==0) printf("not leap yr");
-//         break;
+//         switch(x%400==0){
+//             case 0: printf("leap yr");   break;
+//             case 1:printf("not leap yr");  break;
+//         }break;
+//      case 0:
+//         switch(x%4==0){
+//             case 1: printf("leap yr");   break;
+//             case 0:printf("not leap yr");  break;
+//         }break;
 //     default:
 //         printf("Invalid choice");
 //     }
@@ -176,20 +211,22 @@
 
 // #include<stdio.h>
 // int main(){
-//     int x;
+//     float x,amt=0,total=0;
 //     printf("Enter your no:");
 //     scanf("%d",&x);
-//     switch (x)
+//     switch (x<=50)
 //     {
-//     case 1 ... 50:
-//         printf("Rs 0.50/unit");
+//     case 1://true
+//         amt=x*0.5;
 //         break;
-//      case 51 ... 150:
-//         printf("Rs 0.75/unit");
+//      case 0: switch(x<=150){
+//         case 1: amt=x*0.75;
 //         break;
-//      case 151 ... 250:
-//         printf("Rs 1.50/unit");
-//         break;
+//         case 0: switch(x>=150){
+
+//         }
+//      }
+        
 //     default:
 //         printf("Invalid choice");
 //     }
@@ -200,20 +237,19 @@
 // #include<stdio.h>
 // int main(){
 //     int x;
-//     switch (x)
-//     {
-//     case 5>0:
 //     printf("Enter your no:");
 //     scanf("%d",&x);
+//     switch (x>0)
+//     {
+//     case 1:
 //     printf("%d",-x);
+//     break;
+//      case 0:
+//      switch(x<0){
+//         case 1:    printf("%d",-x);
 //         break;
-//      case 5<0:
-//         printf("Enter your no:");
-//     scanf("%d",&x);
-//     printf("%d",+x);
-//         break;
-//     default:
-//         printf("Invalid choice");
+//      }
+//     break;
 //     }
 // }
 
@@ -223,18 +259,13 @@
 //     int x;
 //     printf("Enter your no:");
 //     scanf("%d",&x);
-//     switch (x)
+//     switch (x%2==0)
 //     {
-//     case 2 ... 100:
-//     if(x%2==0)
-//     printf("%d",x+1);
-//     break;
-//      case 1 ... 99:
-//     if(x%2!=0)
-//     printf("%d",x);
-//     break;
-//     default:
-//         printf("Invalid choice");
+//         case 1: 
+//         printf("%d",x+1);
+//         break;
+//         case 0:
+//         printf("%d",x);
 //     }
 // }
 

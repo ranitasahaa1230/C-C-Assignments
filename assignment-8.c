@@ -46,32 +46,19 @@
 
 //Q5.
 
-// #include<stdio.h>
-// int main(){
-//     for(int i=1;i<=5;i++){
-//         for(int j=1;j<=5;j++){
-//             if(j>=i)
-//             printf("*");
-//             else printf(" ");
-//         }
-//         printf("\n");
-//     }
-// }
-
- #include<stdio.h>
+#include<stdio.h>
 int main(){
-    int st=(5/2+1),sp=1;
-    for(int i=1;i<=5;i++){
-        for(int j=1;j<=5;j++){
-            if(i+j==6||i==j){
-            printf("*");
-            }
-            else {
-                printf(" ");
-
-            }
+    int i, st=1,sp=5/2;
+    for(i=1;i<=5;i++){
+        for(int j=1;j<=sp;j++){
+            printf(" ");
         }
+        for(int j=1;j<=st;j++){
+            printf("*");
+        }
+        if(i)
         printf("\n");
     }
 }
 
+ 
