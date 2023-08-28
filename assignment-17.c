@@ -1,10 +1,24 @@
 //1.  Write a program to calculate the length of the string. (without using built-in method)
+#include <stdio.h>
+int main(){
+    char str[10];
+    int i,count=0;
+    printf("Enter a char:");
+    scanf("%c",&str[i]);
+    for(i=0;str[i];i++){
+    count++;
+    }
+    printf("%d",count);
+    return 0;
+}
 
 // 2. Write a program to count the occurrence of a given character in a given string.
+
 
 // 3. Write a program to count vowels in a given string
 
 // 4. Write a program to convert a given string into uppercase
+
 
 // 5. Write a program to convert a given string into lowercase
 

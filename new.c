@@ -1,6 +1,14 @@
-// 10=>q7,q8
-// 12=>q8,q9
+// 9=>1,4,6,8,9,10
+//10=>q7,q8
+//11=>q5,q4,q8
+// 12=>q.9
 // 13=>q9,q8
+//14=>q6,q7,q8,q9,
+//15=>q1,q2,q3,all
+//16=>,,,
+//17=>1,
+//18=>
+//19=>
 
 
 // #include<stdio.h>
@@ -30,17 +38,17 @@
 //     return 0;    
 // }
 
-#include<stdio.h>
-int main(){
-    char str[10]="BHOPAL";
-    int i;
-        for(i=0;str[i];i++);
-        printf("%d",i);
-//or
-    // int count=0;
-    // for(int i=0;str[i];i++){
-    //     count++;
-    // }
-    // printf("%d",count);
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     char str[10]="BHOPAL";
+//     int i;
+//         for(i=0;str[i];i++);
+//         printf("%d",i);
+// //or
+//     // int count=0;
+//     // for(int i=0;str[i];i++){
+//     //     count++;
+//     // }
+//     // printf("%d",count);
+//     return 0;
+// }

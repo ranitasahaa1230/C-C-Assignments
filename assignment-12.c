@@ -124,25 +124,38 @@
 // }
 
 // 8. Write a recursive function to print binary of a given decimal number
+// #include<stdio.h>
+// void binary (int);
+// int main(int a){
+//     printf("Enter a no:");
+//     scanf("%d",&a);
+//     binary(a);
+//     return 0;
+// }
+// void binary(int p){
+//     if(p!=0)
+//     {
+//         binary(p/2);
+//         printf("%d",p%2);
+//     }
+    
+// }
+
+// 9. Write a recursive function to print octal of a given decimal number
 #include<stdio.h>
-void binary (int);
+void octal (int);
 int main(int a){
     printf("Enter a no:");
     scanf("%d",&a);
-    binary(a);
+    octal(a);
     return 0;
 }
-void binary(int p){
-    if(p)
-    {
-        int rem=p%10;
-        printf("%d",rem);
-        binary(p/10);
+void octal(int p){
+    if(p>0){
+        
     }
-    
 }
 
-// 9. Write a recursive function to print octal of a given decimal number
 
 // 10. Write a recursive function to print reverse of a given number
 // #include<stdio.h>

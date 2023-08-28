@@ -1,6 +1,48 @@
 // 1.Write a function to find the greatest number from the given array of any size. (TSRS)
 
+// #include <stdio.h>
+// int greater(int []);
+// int main(int arr[100]){
+//     int m;
+//     m=greater(arr);
+//     printf("%d",m);
+//     return 0;
+// }
+// int greater(int arr[]){
+//     int i,n,larger;
+//     printf("Enter a no:");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         printf("Enter a no%d:",i+1);
+//         scanf("%d",&arr[i]);
+//         larger=arr[0];
+//         if(larger<arr[i]) larger=arr[i];
+//     }
+//     return larger;
+// }
+
 // 2. Write a function to find the smallest number from the given array of any size. (TSRS)
+
+// #include <stdio.h>
+// int smaller(int []);
+// int main(int arr[100]){
+//     int m;
+//     m=smaller(arr);
+//     printf("%d",m);
+//     return 0;
+// }
+// int smaller(int arr[]){
+//     int i,n,larger;
+//     printf("Enter a no:");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         printf("Enter a no%d:",i+1);
+//         scanf("%d",&arr[i]);
+//         larger=arr[0];
+//         if(larger>arr[i]) larger=arr[i];
+//     }
+//     return larger;
+// }
 
 // 3. Write a function to sort an array of any size. (TSRS)
 
