@@ -2,12 +2,15 @@
 
 // #include<stdio.h>
 // int main(){
-//     int firstTerm=0,secondTerm=1,num,i;
-//     int nextTerm=firstTerm + secondTerm;
+//     int firstTerm=0,secondTerm=1,num,i,nextTerm;
 //     printf("Enter the number: ");
 //     scanf("%d",&num);
-//     printf("Fibonnaci Series : %d, %d ",firstTerm, secondTerm);
-//     
+//     for(i=2;i<num;i++){
+//         nextTerm=firstTerm + secondTerm;//1
+//         firstTerm=secondTerm;
+//         secondTerm=nextTerm;
+//     }
+//     printf("%d",nextTerm);
 //     return 0;
 // }
 
@@ -20,8 +23,8 @@
 //     secondTerm=1;
 //     printf("Enter the number: ");
 //     scanf("%d",&n);
-//     printf("Fibonacci series: %d %d ",firstTerm,secondTerm);
-//     for(int i=2;i<n;i++){
+//     printf("1 ");
+//     for(int i=0;i<n-1;i++){
 //         nextTerm=firstTerm+secondTerm;
 //         printf("%d ",nextTerm);
 //         firstTerm=secondTerm;
@@ -34,10 +37,22 @@
 
 // #include<stdio.h>
 // int main(){
-//     int i,n;
+//     int firstTerm=0,secondTerm=1,num,i,nextTerm;
 //     printf("Enter the number: ");
-//     scanf("%d",&n);
-//     if(((5*n*n+4)*(5*n*n+4)) || ((5*n*n-4)(5*n*n-4))) printf("no is there");
+//     scanf("%d",&num);
+//     for(i=2;1;i++){//infinite loop
+//         nextTerm=firstTerm + secondTerm;//1
+//         firstTerm=secondTerm;
+//         secondTerm=nextTerm;
+//         if(num==nextTerm) {
+//              printf("No found");
+//              break;
+//         } 
+//         else if(nextTerm>num){
+//             printf("Not found");
+//             break;
+//         } 
+//     }
 //     return 0;
 // }
 
@@ -63,7 +78,16 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int a,b,hcf=1,i;
+//     printf("Enter 2 no");
+//     scanf("%d %d",&a,&b);
+//     int min=a<b? a:b;
+//     for(i=1;i<=min;i++){
+//         if((a%i==0) && (b%i==0))
+//         hcf=i;
+//     }
+//     if(hcf==1) printf("co prime");
+//     else printf("not co prime");
 //     return 0;
 // }
 
@@ -71,9 +95,17 @@
 
 // #include<stdio.h>
 // int main(){
-//     int flag=0;
+//  int count=0;
 //     for(int i=2;i<=100;i++){
-//         if()
+//          count=0;
+//         for(int div=2;div*div<=i;div++){
+//             if(i%div==0){
+//             count=1;
+//             break;
+//             }
+//         }
+//         if(count==0)
+//         printf("%d ",i);
 //     }
 //     return 0;
 // }
@@ -82,7 +114,20 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//     int a,b;
+//     printf("Enter the terms:");
+//     scanf("%d %d",&a, &b);
+//     for(int i=a;i<=b;i++){
+//             int count=0;
+//         for(int div=2;div<=i/2;div++){
+//             if(i%div==0){
+//             count++;
+//             break;
+//             }
+//         }
+//         if(count==0)
+//         printf("%d ",i);
+//     }
 //     return 0;
 // }
 
@@ -90,28 +135,79 @@
 
 // #include<stdio.h>
 // int main(){
-//     printf("\\\\");
+//  int count=0,n,i;
+//  printf("Enter ano:");
+//  scanf("%d",&n);
+//     for(i=n;1;i++){//infinte loop
+//          count=0;
+//         for(int div=2;div<=i/2;div++){
+//             if(i%div==0){
+//             count=1;
+//             break;
+//             }
+//         }
+//         if(count==0){
+//         printf("%d ",i);
+//         break;
+//         }
+//     }
 //     return 0;
 // }
 
 // 9. Write a program to check whether a given number is an Armstrong number or not
 
 // #include<stdio.h>
+// #include<math.h>
 // int main(){
-//     printf("\\\\");
+//     int n,arms=0,temp,count=0;
+//     printf("Enter a no");
+//     scanf("%d",&n);
+//     temp=n;
+//     while(temp!=0){//123
+//         temp=temp/10;//12
+//         count++;
+//     }
+//     temp=n;
+//     while(temp!=0){//123
+//         int rem=temp%10;//3
+//         arms+=pow(rem,count);
+//         temp=temp/10;//12
+//     }
+//     if(arms==n) printf("armstrong no");
+//     else printf("not armstrong no");
 //     return 0;
 // }
 
 // 10. Write a program to print all Armstrong numbers under 1000
 
-// #include<stdio.h>
-// int main(){
-//     int n,div;
-//     printf("Enter a no:");
-//     scanf("%d",&n);
-//     for(int i=1;i<=1000;i++){
-//         int rem=n%10;
-//     }
-//     return 0;
-// }
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int i,arms=0,cod=0,temp;
+    for(int i=1;i<=1000;i++){
+        temp=i;
+        while(temp!=0){
+            temp=temp/10;//12
+            cod++;
+        }
+        temp=i;
+        // while(temp!=0){
+        //     int rem=temp%10;//12
+        //     arms+=pow(rem,cod);
+        //     temp=temp/10;
+        // }
+        // if(arms==i){
+        //     printf("%d ",i);
+        // }
+        arms = pow(temp % 10, cod)
+              + pow((temp % 100 - temp % 10) / 10, cod)
+              + pow((temp % 1000 - temp % 100) / 100, cod);
+        // Check for Armstrong Number
+        if (arms == i) {
+            printf("%d ", i);
+        }
+        cod = 0;
+    }
+    return 0;
+}
 

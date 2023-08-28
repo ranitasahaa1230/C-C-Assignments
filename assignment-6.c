@@ -100,7 +100,7 @@ int main(){
     int num,i,flag=0;
     printf("Enter the number: ");
     scanf("%d",&num);//5
-    for(i=2;i<=sqrt(num);i++){
+    for(i=2;i<=(num)/2;i++){//i<=sqrt(num) //optimised
         if(num%i==0){
             flag=1;
             break;
