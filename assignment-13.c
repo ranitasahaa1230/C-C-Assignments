@@ -111,44 +111,42 @@
 
 
 // 8. Write a recursive function to print first N terms of Fibonacci series
-#include<stdio.h>
-int COD(int,int);
-int main(int a,int b){
-    printf("Enter 2 no: ");
-    scanf("%d%d",&a,&b);
-    int p=COD(a,b);
-    printf("%d",p);
-    return 0;
-}
-int COD(int base,int power){
-    if(power!=0){
-        return base*COD(base,power-1);
-    }
-    return 1;
-}
-
-
-// 9. Write a program in C to count the digits of a given number using recursion.
 // #include<stdio.h>
 // int COD(int);
 // int main(int a){
-//     printf("Enter a no: ");
+//     printf("Enter 2 no: ");
 //     scanf("%d",&a);
-//     int p=COD(a);
-//     printf("%d",p);
+//     for(int i=0;i<a;i++)
+//     printf("%d ",COD(i));
 //     return 0;
 // }
-// int COD(int n1){
-//     int count=0;
-//     if(n1>0){
-//          int rem=n1%10;
-//          count++;
-//          (n1/10);
-//          return;
-//     }else{
-//         return count;
-//     }
+// int COD(int base){
+//     if(base==0 || base==1) return base;
+//     return COD(base-1)+COD(base-2);
 // }
+
+
+// 9. Write a program in C to count the digits of a given number using recursion.
+#include<stdio.h>
+int COD(int);
+int main(int a){
+    printf("Enter a no: ");
+    scanf("%d",&a);
+    int p=COD(a);
+    printf("%d",p);
+    return 0;
+}
+int COD(int n1){
+    int count=0;
+    if(n1>0){
+         int rem=n1%10;
+         count++;
+         (n1/10);
+         return;
+    }else{
+        return count;
+    }
+}
 
 // 10. Write a program in C to calculate the power of any number using recursion.
 // #include<stdio.h>

@@ -142,19 +142,20 @@
 // }
 
 // 9. Write a recursive function to print octal of a given decimal number
-#include<stdio.h>
-void octal (int);
-int main(int a){
-    printf("Enter a no:");
-    scanf("%d",&a);
-    octal(a);
-    return 0;
-}
-void octal(int p){
-    if(p>0){
-        
-    }
-}
+// #include<stdio.h>
+// void octal (int);
+// int main(int a){
+//     printf("Enter a no:");
+//     scanf("%d",&a);
+//     octal(a);
+//     return 0;
+// }
+// void octal(int p){
+//     if(p>0){
+//         octal(p/8);
+//         printf("%d",p%8);
+//     }
+// }
 
 
 // 10. Write a recursive function to print reverse of a given number

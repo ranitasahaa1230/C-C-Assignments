@@ -165,7 +165,35 @@
 //     }
 // }
 
-// 8. Write a function to print PASCAL Triangle. (TSRN)
+// 8. Write a function to print PASCAL Triangle. (TSRN)[fact,comb,for]
+
+// #include<stdio.h>
+// int pascal(int);
+// int main(int a){
+//     printf("Enter a no.");
+//     scanf("%d",&a);
+//     pascal(a);
+//     return 0;
+// }
+// int  fact(int n){
+//     int facti=1;
+//     for(int i=1;i<=n;i++){
+//         facti=facti*i;
+//     }
+//     return facti;
+// }
+// int comb(int n,int r){    
+//     return fact(n)/(fact (r)*fact(n-r));
+// }
+// int pascal(int c){
+//     for(int i=0;i<=c;i++){
+//         for(int j=0;j<=i;j++){
+//             printf("%d ",comb(i,j));
+//         }
+//         printf("\n");
+//     }
+// }
+
 
 // 9. Write a program in C to find the square of any number using the function.
 
@@ -184,16 +212,23 @@
 // 10. Write a program in C to find the sum of the series 1! /1+2!/2+3!/3+4!/4+5!/5 using the
 // function.
 // #include<stdio.h>
-// int fact(int);
+// int sumF(int);
 // int main(int a){
-// a=fact(1)/1+fact(2)/2+fact(3)/3+fact(4)/4+fact(5)/5;
+// a=sumF(5);
 //  printf("%d",a);
 //  return 0;
 // }
 // int fact(int s){
 //     int facti=1;
-//     for(int i=0;i<s;i++){
-//         facti=facti+i*facti;
+//     for(int i=1;i<=s;i++){
+//         facti=i*facti;
 //     }
 //     return facti;
+// }
+// int sumF(int s){
+//     int sum=0;
+//     for(int i=1;i<=s;i++){
+//         sum=sum+fact(i)/i;
+//     }
+//     return sum;
 // }

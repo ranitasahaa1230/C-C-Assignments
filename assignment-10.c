@@ -100,51 +100,94 @@
 // 7. Write a function to calculate the number of combinations one can make from n items
 // and r selected at a time. (TSRS)
 
+// #include<stdio.h>
+// int comb(int,int);
+// int main(int a,int b){
+//     printf("Enter a no.");
+//     scanf("%d %d",&a, &b);
+//     int res=comb(a,b);
+//     printf("%d",res);
+//     return 0;
+// }
+// int  fact(int n){
+//     int facti=1;
+//     for(int i=1;i<=n;i++){
+//         facti=facti*i;
+//     }
+//     return facti;
+// }
+// int comb(int n,int r){    
+//     return fact(n)/(fact (r)*fact(n-r));
+// }
 
 // 8. Write a function to calculate the number of arrangements one can make from n items
 // and r selected at a time. (TSRS)
+
+// #include<stdio.h>
+// int perm(int,int);
+// int main(int a,int b){
+//     printf("Enter a no.");
+//     scanf("%d %d",&a, &b);
+//     int res=perm(a,b);
+//     printf("%d",res);
+//     return 0;
+// }
+// int  fact(int n){
+//     int facti=1;
+//     for(int i=1;i<=n;i++){
+//         facti=facti*i;
+//     }
+//     return facti;
+// }
+// int perm(int n,int r){    
+//     return fact(n)/(fact(n-r));
+// }
 
 // 9. Write a function to check whether a given number contains a given digit or not.
 // (TSRS)
 
 // #include<stdio.h>
-// int comb(int);
-// int main(int a){
+// int comb(int,int);
+// int main(int a,int b){
 //     printf("Enter a no.");
-//     scanf("%d",&a);
-//     comb(a);
+//     scanf("%d %d",&a, &b);
+//     comb(a,b);
 //     return 0;
 // }
-// int comb(int n){
-//     if(n>=0 && n<=9){
-//         printf("%d is a number",n);
-//     }else{
-//      printf("%d is not a number",n);
+// int comb(int n,int dig){
+//     int temp=n,flag=0;
+//     while(temp!=0){
+//         int rem=temp%10;
+//         if (rem==dig) flag=1;
+//         temp=temp/10;
 //     }
+//     if(flag==1) printf("contains no");
+//     else printf("not contains");
 //     return n;
 // }
 
 // 10. Write a function to print all prime factors of a given number. For example, if the
 // number is 36 then your result should be 2, 2, 3, 3. (TSRN)
 
-// #include<stdio.h>
-// int primeF(int);
-// int main(int a){
-//     printf("Enter a no.");
-//     scanf("%d",&a);
-//     primeF(a);
-//     return 0;
-// }
-// int primeF(int n){
-//     for (int i = 2; i <=n; i++)
-//     {
-//         while(n%i==0){
-//             printf("%d ",i);
-//             n=n/i;
-//         }
-//     }
-//     if(n!=1){
-//         printf("%d",n);
-//     }
-//     return n;
-// }
+#include<stdio.h>
+int primeF(int);
+int main(int a){
+    printf("Enter a no.");
+    scanf("%d",&a);
+    primeF(a);
+    return 0;
+}
+int primeF(int n){
+    int i;
+    for (i = 2; n!=1; i++)
+    {
+        while(n%i==0){
+            printf("%d ,",i);
+            n=n/i;
+        }
+    }
+    // if(n!=1){
+    //     printf("%d",n);
+    // }
+    return n;
+}

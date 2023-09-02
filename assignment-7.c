@@ -183,30 +183,26 @@
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int i,arms=0,cod=0,temp;
-    for(int i=1;i<=1000;i++){
-        temp=i;
-        while(temp!=0){
-            temp=temp/10;//12
+    int i,arms=0,cod=0,n=1000,b,rem;
+    int a=n;
+        while(a){
+            b=a;
+            while(b){
+            b=b/10;//12
             cod++;
+            }
+            b=a;
+        while(b){
+            rem=b%10;//12
+            arms+=pow(rem,cod);
+            b=b/10;
         }
-        temp=i;
-        // while(temp!=0){
-        //     int rem=temp%10;//12
-        //     arms+=pow(rem,cod);
-        //     temp=temp/10;
-        // }
-        // if(arms==i){
-        //     printf("%d ",i);
-        // }
-        arms = pow(temp % 10, cod)
-              + pow((temp % 100 - temp % 10) / 10, cod)
-              + pow((temp % 1000 - temp % 100) / 100, cod);
-        // Check for Armstrong Number
-        if (arms == i) {
-            printf("%d ", i);
-        }
-        cod = 0;
+        if(arms==a)
+            printf("%d ",arms);
+        arms = 0;
+        rem=0;
+        cod=0;
+        a--;
     }
     return 0;
 }

@@ -82,8 +82,74 @@
 // 6. Write a program to sort elements of an array of size 10. Take array values from the
 // user.
 
+// #include<stdio.h>
+// int main(){
+//     int arr[10],i,j,temp;
+//     for(i=0;i<10;i++){
+//         printf("Enter a no:");
+//         scanf("%d ",&arr[i]);
+//     }
+//     for(i=0;i<9;i++){
+//         for(j=i+1;j<10;j++){
+//             if(arr[i]>arr[j]){
+//                 temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+//     for(i=0;i<10;i++){
+//         printf("%d ",arr[i]);
+//     }
+//     return 0;
+// }
 
 // 7. Write a program to find second largest in an array.Take array values from the user.
+
+// #include<stdio.h>
+// int main(){
+//     int arr[10],i,j,temp;
+//     for(i=0;i<=9;i++){
+//         printf("Enter a no:");
+//         scanf("%d ",&arr[i]);
+//     }
+//     for(i=0;i<8;i++){
+//         for(j=i+1;j<9;j++){
+//             if(arr[i]>arr[j]){
+//                 temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+//         printf("%d ",arr[i-1]);
+//     return 0;
+// }
+
+//or optimised
+// #include<stdio.h>
+// int main(){
+//     int arr[10],i,j,largest,second_largest=0,n;
+//     printf("Enter a no:");
+//     scanf("%d",&n);
+//     for(i=0;i<=n-1;i++){
+//         printf("Enter a no:");
+//         scanf("%d",&arr[i]);
+//     }
+//     largest=arr[0];
+//         for(i=0;i<=n-1;i++){
+//             if(largest<arr[i]){
+//             second_largest=largest;
+//             largest=arr[i];
+//             }
+//             else{
+//                 if(arr[i]>second_largest)
+//                 second_largest=arr[i];
+//             }
+//         }
+//         printf("%d ",second_largest);
+//     return 0;
+// }
 
 // 8. Write a program to find the second smallest number in an array.Take array values
 // from the user.
@@ -96,37 +162,32 @@
 //     int arr[100],n,reverse, i;
 //     printf("Enter a no:");
 //     scanf("%d",&n);
-//     for(i=0;i<n;i++){
+//     for(i=0;i<=n-1;i++){
 //         printf("Enter a no%d:",i+1);
 //         scanf("%d",&arr[i]);
 //     }
-//     int rev[n],j=0;
 //     for(i=n-1; i>=0 ;i--){
-//         rev[j]=arr[1];
-//         j++;
+//         printf("%d ",arr[i]);
 //     }
-//     for(i = 0; i < n; i++)  
-//     {  
-//         printf("%d ", rev[j]);  
-//     }
+
 //     return 0;
 // }
 
 // 10. Write a program in C to copy the elements of one array into another array.Take array
 // values from the user.
 
-#include<stdio.h>
-int main(){
-    int arr[10],str[10],i,n;
-    printf("Enter a no:");
-    scanf("%d",&n);
-    for(i=0;i<n;i++){
-        printf("Enter a no%d:",i+1);
-        scanf("%d",&arr[i]);
-    }
-    for(i=0;i<n;i++){
-        str[i]=arr[i];
-        printf("the nos are %d\n",str[i]);
-    }
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int arr[10],str[10],i,n;
+//     printf("Enter a no:");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         printf("Enter a no%d:",i+1);
+//         scanf("%d",&arr[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         str[i]=arr[i];
+//         printf("the nos are %d\n",str[i]);
+//     }
+//     return 0;
+// }
