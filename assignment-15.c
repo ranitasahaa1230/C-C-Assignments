@@ -263,38 +263,17 @@ int main(){
     return 0;
 }
 int smaller(){
-    int i=0,n,j=0,c[10],k=0;
-    int arr[]={1,3,5,7,4};
-    int b[]={2,6,8,11,12};
-    for(k=0;k<10;k++){
-            if(i>=5){
-                while(k<10){
-                    c[k]=b[j];
-                    j++;
-                    k++;
+    int i,freq[100]={0};
+    int arr[]={1,3,5,7,4,8,2,2,1};
+    for(i=0;i<10;i++){
+        freq[arr[i]]++;
+    }
 
-                    if(k==10) break;
-                }
-            }
-            else if(j>=5){
-                while(k<10){
-                    c[k]=b[i];
-                    i++;
-                    k++;
-
-                    if(k==10) break;
-                }
-            }
-            else if(arr[i]<b[j]){
-            c[k]=arr[i];
-            i++;
-            }
-            else{
-            c[k]=b[j];
-            j++;
-            }
-    }   
-    for(k=0;k<10;k++){
-        printf("%d ",c[k]);
+    // for(i=0;i<10;i++){
+    //     printf("%d -> %d\n",arr[i],freq[arr[i]]);
+    // }
+     for(i=0;i<100;i++){
+        if(freq[i]!=0)
+        printf("%d -> %d\n",i,freq[i]);
     }
 }

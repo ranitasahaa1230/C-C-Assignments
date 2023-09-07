@@ -33,27 +33,27 @@
 // console.log(num)
 
 
-async function sleep(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("sleeping");
-            resolve();
-        },1000);
-    })
-}
+// async function sleep(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("sleeping");
+//             resolve();
+//         },1000);
+//     })
+// }
 
-async function main(){
-    console.log(1);
-    sleep();
-    setTimeout(() => {
-        console.log(2);
-    }, 0);
-    Promise.resolve().then(()=>    console.log(3));
-    console.log(4);
-    await sleep();
-}
+// async function main(){
+//     console.log(1);
+//     sleep();
+//     setTimeout(() => {
+//         console.log(2);
+//     }, 0);
+//     Promise.resolve().then(()=>    console.log(3));
+//     console.log(4);
+//     await sleep();
+// }
 
-main();
+// main();
 
 //1
 //4
@@ -65,3 +65,35 @@ main();
 //nullish coal,hoising,promises,splice, strice
 //box model
 //essix
+//a111
+//memory leak
+//event loop
+//seo
+//ssr vs csr
+
+function outer(){
+    const name="Ranita";
+    function inner(){
+        console.log(name);
+    }
+    return inner;
+}
+
+var c=outer()();
+// console.log(c);
+
+// function Child =({ demoProp }) => {
+//     const varToBePassed;
+// demoProp(varToBePassed);
+// }
+
+// const Parent = () => {
+// const demoProp = (var) => {
+//     console.log(var) //displays varToBePassed
+// }
+// return (
+//     <>
+//         <Child demoProp={demoProp} />
+//     </>
+//     )
+// }
