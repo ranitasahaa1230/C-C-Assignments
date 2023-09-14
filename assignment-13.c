@@ -127,26 +127,26 @@
 
 
 // 9. Write a program in C to count the digits of a given number using recursion.
-#include<stdio.h>
-int COD(int);
-int main(int a){
-    printf("Enter a no: ");
-    scanf("%d",&a);
-    int p=COD(a);
-    printf("%d",p);
-    return 0;
-}
-int COD(int n1){
-    int count=0;
-    if(n1>0){
-         int rem=n1%10;
-         count++;
-         (n1/10);
-         return;
-    }else{
-        return count;
-    }
-}
+// #include<stdio.h>
+// int COD(int);
+// int main(int a){
+//     printf("Enter a no: ");
+//     scanf("%d",&a);
+//     int p=COD(a);
+//     printf("%d",p);
+//     return 0;
+// }
+// int COD(int n1){
+//     int count=0;
+//     if(n1>0){
+//          int rem=n1%10;
+//          count++;
+//          (n1/10);
+//          return;
+//     }else{
+//         return count;
+//     }
+// }
 
 // 10. Write a program in C to calculate the power of any number using recursion.
 // #include<stdio.h>
@@ -165,3 +165,19 @@ int COD(int n1){
 //     return 1;
 // }
 
+#include<stdio.h>
+int sum(int);
+int main(int a){
+    int d;
+    printf("Enter a no:");
+    scanf("%d",&a);
+    int p=sum(a);
+    printf("%d",p);
+    return 0;
+}
+
+int sum(int a){
+    if(a==1) return 1;
+    return a+sum(a-1);
+    
+}

@@ -116,7 +116,7 @@
 //     }
 
 //     for(i=0;i<3;i++){
-//            if(strchr(str[i],'@')==0){
+//            if(strchr(str[i],'@')!=0){
 //                 printf("%s \n",str[i]);
 //             } 
 //     }
@@ -127,27 +127,27 @@
 
 // 7. From the list of IP addresses, check whether all ip addresses are valid.
 
-// #include <stdio.h>
-// #include<string.h>
-// int main(){
-//     char str[10][20],t[10]="prratt";
-//     int i;
-//     for(i=0;i<3;i++){
-//         gets(str[i]);
-//         //  fgets(str[i],20,stdin);//beware of null comparison, it checks
-//     }
+#include <stdio.h>
+#include<string.h>
+int main(){
+    char str[10][20],t[10]="prratt";
+    int i;
+    for(i=0;i<3;i++){
+        gets(str[i]);
+        //  fgets(str[i],20,stdin);//beware of null comparison, it checks
+    }
 
-//     for(i=0;i<3;i++){
-//            if(strchr(str[i],'.')==0){
-//                 printf("not all valid");
-//                 break;
-//             }else{
-//                 printf("valid");
-//                 break;
-//             }
-//     }
-//     return 0;
-// }
+    for(i=0;i<3;i++){
+           if(strchr(str[i],'.')==0){
+                printf("not all valid");
+                break;
+            }else{
+                printf("valid");
+                break;
+            }
+    }
+    return 0;
+}
 
 // 8. Given a list of words followed by two words, the task is to find the minimum distance
 // between the given two words in the list of words.
