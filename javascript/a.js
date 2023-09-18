@@ -97,3 +97,8 @@ var c=outer()();
 //     </>
 //     )
 // }
+
+// Q1. 
+// Asked to write pseudo-code for pushing and popping stack.
+//  Had to write a code for adding and deleting nodes of 
+//  doubly-linked list.

@@ -302,4 +302,109 @@ function misiingNo(nums){
     return nums.length*(nums.length+1)/2-sum
 }
 
-console.log(misiingNo([3,0]))
+// console.log(misiingNo([3,0]))
+
+function countOdds(low, high){
+    let output=[],count=0;
+    for(let i=low ; i<=high  ; i++){
+        if(i%2 !== 0){
+            output.push(i);
+            count++;
+        }
+    }
+    return count;
+};
+
+// console.log(countOdds(3,7))
+
+var fizzBuzz = function(n) {
+    let output=[];
+    for(let i=1;i<=n;i++){
+        if(i%3===0 && i%5===0) 
+        output.push("FizzBuzz");
+        else if(i%3===0) 
+        output.push("Fizz");
+        else if(i%5===0) 
+        output.push("Buzz");
+        else output.push(`${i}`)
+    }
+    return output;
+};
+
+// console.log(fizzBuzz(15))
+
+var isPowerOfTwo = function(n) {
+    let x=0;
+    while(2**x<n)
+    x++;
+
+    return n===Math.pow(2,x);
+};
+
+// console.log(isPowerOfTwo(8))
+
+var mySqrt = function(x) {
+    // return Math.floor(Math.sqrt(x));
+    for(let i=0;i<=x+1;i++){
+        if(i*i>x){
+            return i-1;
+        }
+    }
+};
+// console.log(mySqrt(4))
+
+const arr5 = [1, 2, 3, 4, "Hello", {name: "Vishal"}, [1,2,3], 4];
+const findElement=(ar,target)=>{
+    for(let i=0;i<ar.length;i++)
+    if(ar[i]===target) return i;
+    return -1;
+}
+
+// console.log(findElement(arr5, "Hello"));
+// console.log(findElement(arr5, "H"));
+// console.log(arr5.findIndex(r=>r==="Hello"));
+// console.log(arr5.indexOf("Hello"));
+// console.log(arr5.includes("Hello"));
+
+var twoSum = function(nums, target) {
+    let res=[];
+    for(let i=0;i<nums.length-1;i++){
+        for(let j=i+1;j<nums.length;j++){
+            if(nums[i]+nums[j]===target)
+            res.push(i,j);
+        }
+    }
+    return res;
+};
+
+// console.log(twoSum([3,2,3],6))
+
+var majorityElement = function(nums) {
+    let temp={};
+    for(let i=0;i<nums.length;i++){
+        if(temp[nums[i]]){
+            temp[nums[i]]++;
+        }else temp[nums[i]]=1;
+    }
+
+    for(const key in temp)//{2:4}
+    if(temp[key]>nums.length/2) return key;
+    
+};
+// console.log(majorityElement([2,2,1,1,1,2,2]))//2,3
+
+var removeDuplicates = function(nums) {
+    let i=0;
+    for(let j=1;j<nums.length;j++){
+            if(nums[i] !==nums[j]){
+                i++;
+                nums[i]=nums[j];
+            }
+
+    }
+    return i+1;
+};
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+
+
+

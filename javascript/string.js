@@ -72,5 +72,81 @@ function anagram(str1,str2){
         return true;
 }
 
-console.log(anagram("anagram","nagaram"));
-console.log(anagram("rat","car"));
+// console.log(anagram("anagram","nagaram"));
+// console.log(anagram("rat","car"));
+
+const str="kello"
+// console.log(str.toLowerCase(),str.toLocaleLowerCase())
+// console.log(str.toLocaleUpperCase(),str.toLocaleUpperCase())
+
+var strStr = function(haystack, needle) {
+    // if(haystack.includes(needle))
+    //     return haystack.indexOf(needle)
+    // else return -1;
+    for(let i=0;i<haystack.length;i++){
+        if(haystack[i]===needle[i])
+            return true
+    }
+};
+
+console.log(strStr("butsad","sad"))
+
+var isAnagram = function(s, t) {
+    if(s.length!==t.length) return "not anagram";
+
+    // return s.split('').sort().join("")===t.split("").sort().join("")
+    let obj1={};
+    let obj2={};
+
+    for(let i=0;i<s.length;i++){
+        obj1[s[i]]=(obj1[s[i]]|| 0)+1;
+        obj2[t[i]]=(obj2[t[i]]|| 0)+1
+    }
+
+    for(let key in obj1){
+        if(obj1[key] !== obj2[key]) return false;
+    }
+        return true
+    
+};
+// console.log(isAnagram("rat","car"))
+
+var reverseString = function(s) {
+    let left=0, right=s.length-1,temp;
+    while(left<right){
+        temp=s[left];
+        s[left++]=s[right];
+        s[right--]=temp;
+    }
+    return s;
+};
+
+// console.log(reverseString(["h","e","l","l","o"]))
+
+var mergeAlternately = function(word1, word2) {
+    let max=Math.max(word1.length,word2.length)
+    let ans="";
+
+    for(let i=0;i<max;i++){
+        if(i<word1.length){
+            ans+=word1[i]
+        }
+        if(i<word2.length)
+        ans+=word2[i];
+    }
+    return ans;
+};
+
+// console.log(mergeAlternately("abcd","pqr"))
+
+var lengthOfLastWord = function(s) {
+    // return res=s.trim("  ").split(" ").at(-1).length;
+    
+    for (let index = 0; index < s.length; index++) {
+        const element = array[index];
+        
+    }
+};
+console.log(lengthOfLastWord("Hello World  "))
+
+
