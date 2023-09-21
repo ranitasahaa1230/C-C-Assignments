@@ -12,7 +12,7 @@ const flat=(arr)=>{
     }
     return output
 }
-// console.log(flat(arr2))
+console.log(flat(arr2))
 
 let array1 = [1, 0, 2, 3, 4, , 0,1,2];
 let array2 = [3, 5, 6, 7, 8, 13];

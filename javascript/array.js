@@ -124,3 +124,48 @@ let nums=[2,7,11,15]
 // }
 // console.log(maxProfit([7,1,5,3,6,4]));
 // console.log(maxProfit([7,6,4,3,1]));
+
+const btn=document.querySelector('.button');
+const btnP=document.querySelector(".increment-pressed");
+const btnT=document.querySelector(".increment-count");
+const btnTH=document.querySelector(".increment-counts");
+
+let Pressedcount=0,triggerCount=0,thC=0;
+const count=()=>{
+    btnT.innerHTML=++triggerCount;
+}
+
+const countTh=()=>{
+    btnTH.innerHTML=++thC;
+}
+
+const debounce=(func,delay)=>{
+    let timer;
+    return function(){
+        clearTimeout(timer);
+        timer=setTimeout(()=>{
+            func();
+        },delay)
+    }
+}
+
+const throttle=(func,limit)=>{
+    let flag=true;
+    return function(){
+        if(flag){
+            func();
+            flag=false;
+        setTimeout(()=>(flag=true),limit)
+        }
+    }
+}
+
+const debouneSearch=debounce(count,800)
+const ThrottleSearch=throttle(countTh,800)
+
+
+btn.addEventListener("click",()=>{
+    btnP.innerHTML=++Pressedcount;
+    debouneSearch();
+    ThrottleSearch()
+});
