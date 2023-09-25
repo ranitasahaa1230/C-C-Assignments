@@ -102,3 +102,9 @@ var c=outer()();
 // Asked to write pseudo-code for pushing and popping stack.
 //  Had to write a code for adding and deleting nodes of 
 //  doubly-linked list.
+
+// (function() {
+// var a = b = 5;
+// })();
+// console.log(b);
+// console.log(a);

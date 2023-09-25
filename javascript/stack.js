@@ -1,4 +1,4 @@
-//stack=>LIFO,FIFO
+//stack=>LIFO,FILO
 //push(),pop(),peek()=>topmost Element,isEmpty(),//true or false,size()
 
 const reverseWords=(str)=>{
