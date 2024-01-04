@@ -87,7 +87,17 @@ const rotateArr=(arr,k)=>{
     if(k>size){
         k=k%size;
     }
+
+    //[1,2,3,4,5,6,7]=>[7,6,5,4,3,2,1]=>[5,6,7,4,3,2,1]=>[5,6,7,1,2,3,4]
+
 }
 
+function reverse(arr,left,right){
+    while(left<right){
+        const temp=arr[left];
+        arr[left++]=arr[right];
+        arr[right--]=temp;
+    }
+}
 console.log(rotateArr([1,2,3,4,5,6,7],3));
 console.log(rotateArr([-1,-100,3,99],2))
