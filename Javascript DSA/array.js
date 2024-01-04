@@ -80,7 +80,7 @@ const rotateArr=(arr,k)=>{
     // arr.unshift(...rotateArray);//0(N)
 
     // return arr;
-    //TC:0(N)
+    //TC:0(N)+0(n)=>0(n)
 
     //2.
     let size=arr.length;//7
@@ -89,7 +89,13 @@ const rotateArr=(arr,k)=>{
     }
 
     //[1,2,3,4,5,6,7]=>[7,6,5,4,3,2,1]=>[5,6,7,4,3,2,1]=>[5,6,7,1,2,3,4]
+    reverse(arr,0,arr.length-1);//0(n)
+    reverse(arr,0,k-1);//0(k)
+    reverse(arr,k,arr.length-1);//0(n-k)
 
+    return arr;
+    //TC:0(n)
+    //SC:0(1);no new arrays been created
 }
 
 function reverse(arr,left,right){
@@ -99,5 +105,39 @@ function reverse(arr,left,right){
         arr[right--]=temp;
     }
 }
-console.log(rotateArr([1,2,3,4,5,6,7],3));
-console.log(rotateArr([-1,-100,3,99],2))
+// console.log(rotateArr([1,2,3,4,5,6,7],3));
+// console.log(rotateArr([-1,-100,3,99],2))
+
+const removeDuplicateArr=(arr)=>{
+   //1. // const removeDuplicate=Array.from(new Set(arr));
+    // return removeDuplicate.length;
+
+    //2.
+    // for(let i=0;i<arr.length-1;i++){//0(N)
+    //     if(arr[i]===arr[i+1]){
+    //         arr.splice(i+1,1);//0(1)=>we are doing for one element, thats why 0(1)
+    //         i--;
+    //     }
+    // }
+    // return arr.length;
+    //TC:0(n)
+    //SC:0(1)
+
+    //3. Two Pointer Approach
+    if(arr.length===0) return 0;
+    let i=0;
+
+    for(let j=1;j<arr.length;j++){
+        if(arr[i]!==arr[j]){
+            i++;
+            arr[i]=arr[j];
+        }
+    }
+    return i+1;
+    //[1,1,2]
+    //i=>1+1
+    //j=>2
+    //[1,]
+}
+console.log(removeDuplicateArr([1,1,2]));
+console.log(removeDuplicateArr([0,0,1,1,1,2,2,3,3,4]))
