@@ -21,17 +21,24 @@ class Stack{
     size(){
         return this.stack.length
     }
+    printStack(){
+        for(let i=0;i<this.stack.length;i++){
+            console.log(this.stack[i],"stack")
+        }
+    }
 }
 
 const stack=new Stack;
 // console.log(stack.size());
 stack.push(78);
 stack.push(50);
-// console.log(stack.peek());
-// console.log(stack.size());
-// console.log(stack.pop());
-// console.log(stack.pop());
-// console.log(stack.isEmpty());
+console.log(stack.peek());
+console.log(stack.size());
+console.log(stack.pop());
+console.log(stack.printStack());
+console.log(stack.isEmpty());
+console.log(stack.pop());
+console.log(stack.isEmpty());
 
 function reverseWords(str){
     // return str.split(' ').reverse().join(' ')
