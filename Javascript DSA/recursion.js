@@ -22,9 +22,14 @@ function rangeofN(startNum, endNum){
 // console.log(rangeofN(1,5));
 
 function Palindrome(num){
-   
+   let strNum=num.toString();
+   if(strNum.length<=1) return true;
+   if(strNum[0]!==strNum[strNum.length-1]) return false
+   else{
+     return Palindrome(strNum.slice(1,strNum.length-1));
+   }
 }
-console.log(Palindrome(121));
+console.log(Palindrome(a));
 console.log(Palindrome(10));
 
 function Fibonacci(num){
