@@ -1,4 +1,4 @@
-//STACK=>LIFO, FIFO
+//STACK=>LIFO, FILO
 class Stack{
     constructor(){
         this.stack=[];
