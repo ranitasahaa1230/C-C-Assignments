@@ -180,4 +180,28 @@ const slidingWindow=function(nums,k){
     //SC:0(N)
 }
 
-console.log(slidingWindow([1,3,-1,-3,5,3,6,7],3))
+// console.log(slidingWindow([1,3,-1,-3,5,3,6,7],3))
+
+const optimizedSlidingWindow=function(nums,k){
+    const result=[];//0(n)=>SC
+    const dequeue=[];//0(3)=>0(k)=>SC
+
+    for(let i=0;i<nums.length;i++){//0(N)
+        if(dequeue.length>0 && dequeue[0]<=i-k){
+            dequeue.shift();
+        }
+        while(dequeue.length>0 && nums[dequeue[dequeue.length-1]]<nums[i]){
+            dequeue.pop();
+        }
+        dequeue.push(i);
+
+        if(i>=k-1){
+            result.push(nums[dequeue[0]]);
+        }
+    }
+    return result;
+    //TC:0(N)
+    //SC:0(N+k)=>0(n)
+}
+
+console.log(optimizedSlidingWindow([1,3,-1,-3,5,3,6,7],3))
