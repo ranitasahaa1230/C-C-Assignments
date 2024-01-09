@@ -89,3 +89,10 @@ const compareFunction = (a, b) => {
   
 //   console.log(people.sort(compareFunctionForObj));
 
+
+var sortArray = function(arr) {
+    let n=arr.length;
+    
+    
+    return arr;
+};
