@@ -81,7 +81,8 @@ function upperBound(nums){
     }
     return nums[0] >= 0 ? 0 : low+1;
 }
-
+//low=0=>3; high=5=>2
+//mid=2=>3
 function lowerBound(nums){
     let low=0;
     let high=nums.length-1;
@@ -94,6 +95,8 @@ function lowerBound(nums){
     }
     return nums[nums.length-1] <= 0 ? 0 : nums.length-low;
 }
+//low=>0=>3;  high=>5=>3
+//mid=>3=>2
 
 console.log(maximumCount( [-2,-1,-1,1,2,3]));
 console.log(maximumCount([-3,-2,-1,0,0,1,2]));
