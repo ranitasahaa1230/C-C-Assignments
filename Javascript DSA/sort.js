@@ -129,7 +129,50 @@ function quickSort(arr){
         }
     }
     return [...quickSort(left),pivot,...quickSort(right)]
+    //BCTC:0(nlogn)//v.good algo
+    //ACTC:0(nlogn)//dviding into 2 parts and doing into for n times
+    //WCTC:0(n^2)// if first element is the last element
+
+    //ACSC: 0(logn)//SINCE DOING it recursively, so takes auxillary space
+    //WCSC:0(n)//largest elemt would be on the 1st space
 }
 
-console.log(quickSort([8,3,5,4,7,6,1,2]));
+// console.log(quickSort([8,3,5,4,7,6,1,2]));
 
+// Approach 2 - Without using left and right Arrays
+function quickSortArr(arr, start = 0, end = arr.length - 1) {
+    if (start < end) {
+      const pivotIndex = pivot(arr, start, end);
+      quickSortArr(arr, start, pivotIndex - 1);
+      quickSortArr(arr, pivotIndex + 1, end);
+    }
+  
+    return arr;
+  }
+  
+  function pivot(arr, start = 0, end = arr.length - 1) {
+    function swap(array, i, j) {
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  
+    let pivot = arr[start];
+    let swapIdx = start;
+  
+    for (let i = start + 1; i < arr.length; i++) {
+      if (arr[i] < pivot) {
+        swapIdx++;
+        swap(arr, swapIdx, i);
+      }
+    }
+  
+    swap(arr, start, swapIdx);
+    return swapIdx;
+  }
+
+  var sortArray = function(arr) {
+    return quickSortArr(arr);
+}
+
+console.log(sortArray([8,3,5,4,7,6,1,2]));
