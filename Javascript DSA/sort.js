@@ -89,10 +89,47 @@ const compareFunction = (a, b) => {
   
 //   console.log(people.sort(compareFunctionForObj));
 
+//MERGE SORT:
+const  mergeSort = function(arr) {
+    if(arr.length<=1) return arr;
+    const mid=Math.floor(arr.length/2);
 
-var sortArray = function(arr) {
-    let n=arr.length;
+    const left=mergeSort(arr.slice(0,mid))//dividing into=>
+    const right=mergeSort(arr.slice(mid))//two part=>0(logn)
     
-    
-    return arr;
+    return merge(left,right);
 };
+
+function merge(left,right){//0(n)
+    const sortedArr=[];
+    while(left.length && right.length){
+        if(left[0]<right[0])
+        sortedArr.push(left.shift());
+        else{
+            sortedArr.push(right.shift())
+        }
+    }
+    return [...sortedArr,...left,...right];
+}
+//TC:0(nlog n)
+//SC::0(n)
+//   console.log(mergeSort([8,3,5,4,7,6,1,2]));
+
+//Quick Sort:
+function quickSort(arr){
+    if(arr.length<=1) return arr;
+
+    const pivot=arr[0];
+    const left=[], right=[];
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]>pivot){
+            right.push(arr[i]);
+        }else{
+            left.push(arr[i]);
+        }
+    }
+    return [...quickSort(left),pivot,...quickSort(right)]
+}
+
+console.log(quickSort([8,3,5,4,7,6,1,2]));
+
