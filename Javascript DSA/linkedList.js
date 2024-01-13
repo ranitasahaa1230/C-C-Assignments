@@ -128,4 +128,5 @@ linkedList.removeAt(1)
 
 
 linkedList.printLinkedList();
+
 console.log("size", linkedList.size())//
