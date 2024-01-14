@@ -129,4 +129,3 @@ class Node {
   
   linkedList.printLinkedList();
   
-  console.log("size", linkedList.size())//
