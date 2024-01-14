@@ -113,19 +113,5 @@ class Node {
       }
   }
   
-  const linkedList=new LinkedList();
   
-  linkedList.addFirst(5);
-  linkedList.addFirst(780)
-  linkedList.addFirst(50)
-  linkedList.addFirst(125)
-  // linkedList.addLast(30)
-  
-  linkedList.removeTop()
-  linkedList.addAt(2,8)
-  linkedList.removeLast()
-  linkedList.removeAt(1)
-  
-  
-  linkedList.printLinkedList();
   
