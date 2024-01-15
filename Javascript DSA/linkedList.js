@@ -161,5 +161,13 @@ const reverseList=(head)=>{
     return prev;
 }
 
-console.log(reverseList([[1,2,3,4,5]]))
-console.log(reverseList([[1,2]]))
+// console.log(reverseList([[1,2,3,4,5]]))
+// console.log(reverseList([[1,2]]))
+
+const deleteList=(head)=>{
+    node.val=node.next.val; //4=>5=>1=>9=> 4=>1>1>9
+    node.next=node.next.next
+}
+
+console.log(deleteList([[1,2,3,4,5]]))
+console.log(deleteList([[1,2]]))
