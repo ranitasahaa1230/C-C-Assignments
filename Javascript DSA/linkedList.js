@@ -169,5 +169,29 @@ const deleteList=(head)=>{
     node.next=node.next.next
 }
 
-console.log(deleteList([[1,2,3,4,5]]))
-console.log(deleteList([[1,2]]))
+// console.log(deleteList([[1,2,3,4,5]]))
+// console.log(deleteList([[1,2]]))
+
+const removeNthFromEnd=(head,n)=>{
+    let slow=head;
+    let fast=head;
+
+    for(let i=0;i<n;i++){
+        fast=fast.next; //fast is at the nth place
+    }
+
+    if(!fast){
+        return head.next
+    }
+
+    while(fast.next){
+        fast=fast.next;
+        slow=slow.next;
+    }
+
+    slow.next=slow.next.next;
+    return head;
+}
+
+console.log(removeNthFromEnd([[1,2,3,4,5]]))
+console.log(removeNthFromEnd([[1,2]]))
