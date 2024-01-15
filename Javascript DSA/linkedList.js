@@ -1,3 +1,4 @@
+//Linked List
 class Node {
   constructor(data) {
     this.data = data;
@@ -30,13 +31,13 @@ class LinkedList {
             currentNode=currentNode.next
         }
 
-        currentNode.next=currentNode;
+        currentNode.next=newNode;
     }
 
     size(data){
         let count=0;
         let currentNode=this.head;
-        while(currentNode.next){
+        while(currentNode){
             count++;
             currentNode=currentNode.next;
         }
@@ -49,7 +50,7 @@ class LinkedList {
         }
 
         const newNode=new Node(data);//node has two things data amd next
-        if(index==0){
+        if(index===0){
             newNode.next=this.head;
             this.head=newNode;
             return;
@@ -84,7 +85,7 @@ class LinkedList {
          currentNode.next=null;
     }
 
-    removeAt(index,data){
+    removeAt(index){
         if(index<0 || index>this.size()){
             return "Invalid data";
         }
@@ -113,20 +114,36 @@ class LinkedList {
     }
 }
 
-const linkedList=new LinkedList();
+const linkedlist=new LinkedList();
+linkedlist.addFirst(5);
+linkedlist.addFirst(3);
+linkedlist.addFirst(8);
+linkedlist.addFirst(89);
+linkedlist.addLast(6);
 
-linkedList.addFirst(5);
-linkedList.addFirst(780)
-linkedList.addFirst(50)
-linkedList.addFirst(125)
-// linkedList.addLast(30)
+linkedlist.removeTop();
 
-linkedList.removeTop()
-linkedList.addAt(2,8)
-linkedList.removeLast()
-linkedList.removeAt(1)
+linkedlist.addAt(2, 10);
 
+linkedlist.removeLast();
+linkedlist.removeAt(2);
 
-linkedList.printLinkedList();
+// linkedlist.printLinkedList();
+// console.log("size", linkedlist.size())
 
-console.log("size", linkedList.size())//
+//Palindrome Linked List
+
+const isPalindrome=(head)=>{
+    let string1=string2="";
+    let currentNode=head;
+
+    while(currentNode!=null){
+        string1=`${string1}${currentNode.val}`;
+        string2=`${currentNode.val}${string2}`;
+        currentNode=currentNode.next
+    }
+    return string1===string2;
+}
+
+console.log(isPalindrome([[1,2,2,1]]))
+console.log(isPalindrome([[1,2]]))
