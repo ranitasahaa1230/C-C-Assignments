@@ -137,7 +137,7 @@ const isPalindrome=(head)=>{
     let string1=string2="";
     let currentNode=head;
 
-    while(currentNode!=null){
+    while(currentNode!==null){
         string1=`${string1}${currentNode.val}`;
         string2=`${currentNode.val}${string2}`;
         currentNode=currentNode.next
@@ -145,5 +145,21 @@ const isPalindrome=(head)=>{
     return string1===string2;
 }
 
-console.log(isPalindrome([[1,2,2,1]]))
-console.log(isPalindrome([[1,2]]))
+// console.log(isPalindrome([[1,2,2,1]]))
+// console.log(isPalindrome([[1,2]]))
+
+const reverseList=(head)=>{
+    let prev=null;
+    let currentNode=head;
+
+    while(currentNode !== null){
+        const nextNode=currentNode.next;
+        currentNode.next=prev;
+        prev=currentNode;
+        currentNode=nextNode;
+    }
+    return prev;
+}
+
+console.log(reverseList([[1,2,3,4,5]]))
+console.log(reverseList([[1,2]]))
