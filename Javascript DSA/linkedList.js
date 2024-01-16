@@ -34,7 +34,7 @@ class LinkedList {
         currentNode.next=newNode;
     }
 
-    size(data){
+    size(){
         let count=0;
         let currentNode=this.head;
         while(currentNode){
