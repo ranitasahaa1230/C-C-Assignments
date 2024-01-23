@@ -97,4 +97,24 @@ const orders = [
     { product: 'Google Pixel', price: 799, quantity: 3 },
 ];
 const sum=orders.reduce((acc,cval)=>acc+cval.price*cval.quantity,0);
-console.log(sum)
+// console.log(sum)
+
+const words = ['apple', 'banana', 'cherry', 'dragonfruit', 'elderberry'];
+const longWord=words.reduce((longestWord,word)=>word.length> longestWord.length ? word : longestWord ,"");
+// console.log(longWord.length);
+// console.log(longWord);
+
+const numbers = [5, 2, 8, 4, 3];
+const largestNumFact=numbers.reduce((great,num)=>num>great ? num : great,0);
+console.log(largestNumFact)
+
+const students = [
+    { name: 'John', score: 85 },
+    { name: 'Sarah', score: 92 },
+    { name: 'Michael', score: 88 },
+    { name: 'Emma', score: 95 },
+    { name: 'Daniel', score: 90 },
+];
+const filterStu=students.filter((s)=>s.score>90).reduce((acc,cval)=>(acc+cval.score)/2,0);
+console.log(filterStu)
+
