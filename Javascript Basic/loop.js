@@ -73,4 +73,28 @@ var missingNumber = function(nums) {
     }
     return nums.length*(nums.length+1)/2-sum;
 };
-  console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+//   console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+
+const employees = [
+    { name: 'John', age: 32 },
+    { name: 'Sarah', age: 28 },
+    { name: 'Michael', age: 40 },
+];
+const employeesName=employees.map((i)=>i.name);
+// console.log(employeesName)
+
+const products = [
+    { name: 'iPhone', price: 999, inStock: true },
+    { name: 'Samsung Galaxy', price: 899, inStock: false },
+    { name: 'Google Pixel', price: 799, inStock: true },
+];
+const inStockProd=products.filter((i)=>i.inStock);
+// console.log(inStockProd)
+
+const orders = [
+    { product: 'iPhone', price: 999, quantity: 2 },
+    { product: 'Samsung Galaxy', price: 899, quantity: 1 },
+    { product: 'Google Pixel', price: 799, quantity: 3 },
+];
+const sum=orders.reduce((acc,cval)=>acc+cval.price*cval.quantity,0);
+console.log(sum)
